@@ -1,0 +1,10 @@
+body a.page-top {
+  border: solid 1px black;
+  display: block;
+  position: fixed;
+  right: 10px;
+  bottom: 10px;
+  font-size: 1.2em;
+  padding-left: 10px;
+  padding-right: 8px;
+}

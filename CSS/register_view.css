@@ -1,0 +1,90 @@
+body {
+  margin: 0;
+  /*background: white;*/
+  background: #91989F;
+}
+
+#useridPrint,#statusPrint{
+  background: #fff;
+  width: 200px;
+  font-size: 20px;
+  text-align: center;
+  padding: 10px;
+  margin-bottom: 10px;
+  margin-top: 10px;
+  margin-left: 10px;
+  /*margin-left: auto;
+  margin-right: auto;*/
+}
+
+.menu {
+  /*height: 500px;*/
+  width: 60%;
+  margin: 50px auto;
+  padding: 50px;
+  background: #fff;
+}
+
+#teacherQuest {
+  background: #0F2540;
+  color: #fff;
+  padding: 10px;
+  display: block;
+  margin: 0;
+  border: 1px solid #fff;
+}
+
+#teacherQuest {
+  background: #0F2540;
+}
+
+input[type="checkbox"].on-off{
+  display: none;
+}
+
+//ラジオボタンのラベル
+#selectPointer {
+  cursor:pointer ;
+}
+
+//登録ボタン
+#allSubmitr {
+  cursor:pointer ;
+  cursor: hand;
+}
+
+.menu ul {
+  -webkit-transition: all 0.5s;
+  -moz-transition: all 0.5s;
+  -ms-transition: all 0.5s;
+  -o-transition: all 0.5s;
+  transition: all 0.5s;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+table{
+  border-collapse: collapse;
+  width:100%;
+}
+
+table .No{
+  width:auto;
+  text-align: center;
+  vertical-align: middle;
+}
+
+table .evaluate{
+  white-space: normal;
+
+}
+
+input[type="checkbox"].on-off + .menu ul{
+  height: 0;
+  overflow: hidden;
+}
+
+input[type="checkbox"].on-off:checked + .menu ul{
+  height: auto;
+}

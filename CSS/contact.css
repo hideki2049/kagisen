@@ -1,0 +1,208 @@
+body{
+  margin:0px;
+  padding:0px;
+}
+
+div.all{
+  width:100%;
+}
+
+header.header{
+  width: 100%;
+  position: fixed;
+  top: 30px;
+  right: 10px;
+  z-index: 10px;
+  /*background: rgba(0, 0, 0, 0.6);*/
+}
+
+ul{
+  list-style-type: none;
+}
+
+div.inner{
+  text-align: right;
+
+}
+
+nav.menu li{
+  display: inline-block;
+  padding: 0 60px 0px 45px;
+  white-space: nowrap;
+  font-size: 1em;
+}
+
+nav.menu li a{
+  color: black;
+  font-family: "Times New Roman";
+  cursor: pointer;
+  font-size: 1.1em;
+}
+
+a{
+  outline:none;
+  text-decoration: none;
+  line-height: 1.7;
+}
+
+div.contents_block{
+  width: 100%;
+  height: 100%;
+  /*text-align: center;*/
+}
+
+div.section{
+  height: 100%;
+  text-align: center;
+}
+
+div.contents_block div.contents div.section h2{
+  padding-top: 13%;
+  font-family: "Times New Roman";
+  font-weight: 100;
+  font-size: 40px;
+  letter-spacing: 0.07em;
+}
+
+div.explanation{
+  padding-top: 5px;
+}
+
+div.explanation p{
+   font-size: 18px;
+}
+
+p.brank_width{
+  font-family: "Times New Roman";
+  margin-top: -10px;
+}
+
+div.inner1{
+  padding-top: 10px;
+}
+
+div.inner1 p{
+  font-size: 18px;
+}
+
+
+/*********************↓リンクボタン*********************/
+div.a_link{
+  padding-top: 110px;
+  text-align: center;
+}
+a.scroll {
+  padding-top: 60px;
+  z-index: 2;
+  display: inline-block;
+  -webkit-transform: translate(0, -50%);
+  transform: translate(0, -50%);
+  font-family: "Times New Roman";
+  text-decoration: none;
+}
+a.scroll span {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  width: 24px;
+  height: 24px;
+  margin-left: -12px;
+  border-left: 1px solid black;
+  border-bottom: 1px solid black;
+  -webkit-transform: rotate(-45deg);
+  transform: rotate(-45deg);
+  box-sizing: border-box;
+}
+/*********************↑リンクボタン*********************/
+/*********************↓section_sub*********************/
+div#section_sub{
+  margin-top: 140px;
+  /*background-color: red;*/
+}
+
+hr.border{
+  width: 60%;
+  margin-left: 20%;
+  margin-right: 20%;
+  border: solid 0.5px rgb(191, 29, 79);
+}
+
+div#section_sub h2.sub_title_en{
+  text-align: center;
+  font-family: "Times New Roman";
+  font-weight: 100;
+  font-size: 40px;
+  letter-spacing: 0.07em;
+  color: rgb(191, 29, 79);
+}
+/*********************↑section_sub*********************/
+/*********************↓mail_form*********************/
+div.mail_form{
+  margin:7% 20% 10%;
+}
+
+form.form1{
+  margin:0px auto;
+  padding:0px auto;
+  vertical-align: baseline;
+}
+
+div.left{
+  width: 48.97%;
+  float: left;
+}
+
+div.uname_space{
+  margin-bottom: 40px;
+}
+
+div.email_space{
+  margin-bottom: 40px;
+}
+
+div.tel_space{
+  margin-bottom: 40px;
+}
+.text_box, .text_area{
+  font-size: 1rem;
+  line-height: 1.7;
+  border: 1px solid #a6a6a6;
+  width: 100%;
+  height: 34px;
+}
+
+.text_area{
+  height: auto;
+}
+
+div.right{
+  width: 48.97%;
+  float: right;
+}
+
+div.formButton{
+  clear: both;
+}
+
+div.formButton{
+  margin:0px auto;
+  width: 388px;
+}
+
+button.button1{
+  margin-top: 10%;
+  font-size: 3rem;
+  line-height: 67px;
+  width: 100%;
+  height: 67px;
+}
+
+div.mail_form .text_box:hover{
+  background-color: peachpuff;
+}
+
+div.mail_form .text_area:hover{
+  background-color: peachpuff;
+}
+
+/*********************↑mail_form*********************/

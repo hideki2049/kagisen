@@ -1,0 +1,394 @@
+/***********************↓ここから下***********************/
+/************************メニュー*************************/
+body{
+  margin:0px;
+  padding: 0px;
+}
+
+div.all{
+  width: 100%;
+  height: 100%;
+}
+
+.header--cont{
+  background-color: black;
+  overflow: hidden;
+  margin:0 auto;
+  text-align: center;
+  padding-bottom: 95px;
+}
+
+.top_hdnavi{
+  padding-top: 1px;
+  margin:20px auto;
+}
+
+.top_hdnavi ul li{
+  display: inline-block;
+  padding: 0 60px 0px 45px;
+  white-space: nowrap;
+  font-size: 1em;
+}
+
+.top_hdnavi ul li a{
+  color: white;
+  font-size: 15px;
+  font-family: "Meiryo";
+}
+
+a{
+  outline:none;
+  text-decoration: none;
+  line-height: 1.5;
+}
+
+.clear{
+  clear: both;
+}
+
+header h1{
+  font-family: "Times New Roman";
+  font-weight: 100;
+  font-size: 2.7em;
+  padding:0 80px 0 115px;
+  /*padding:0 13.5% 0 17%;*/
+  line-height: 1.5em;
+  letter-spacing: 0.5em;
+  color: white;
+}
+
+.top_gnavi ul li{
+  padding: 0 40px 0 0;
+  margin-bottom: 0;
+  display: inline-block;
+}
+
+ul{
+  list-style-type: none;
+}
+
+/*********************hoverで線を引く*********************/
+span.style{
+  position: relative;
+  display: block;
+  cursor: pointer;
+  font-size: 1.3em;
+  font-family: "Times New Roman";
+}
+a {
+  text-decoration: none;
+}
+
+span.style:before, span.style:after {
+  content: '';
+  position: absolute;
+  width: 0%;
+  height: 1px;
+  top: 50%;
+  margin-top: -0.5px;
+  background: #fff;
+}
+
+span.style:before {
+  left: -2.5px;
+}
+span.style:after {
+  right: 2.5px;
+  background: orange;
+  transition: width 0.8s cubic-bezier(0.22, 0.61, 0.36, 1);
+}
+
+span.style:hover:before {
+  background: orange;
+  width: 100%;
+  transition: width 0.5s cubic-bezier(0.22, 0.61, 0.36, 1);
+}
+
+span.style:hover:after {
+  background: transparent;
+  width: 100%;
+  transition: 0s;
+}
+/*********************hoverで線を引く*********************/
+
+/***********************↑ここから上***********************/
+/************************メニュー*************************/
+#hoge{
+  width:100%;
+  height:480px;
+  margin:0 auto -20px;
+  padding-bottom: 210px;
+  background-color:#000;
+}
+
+/*********************トップページボタン*********************/
+/*a.page-top {
+    position: fixed;
+    bottom: 60px;
+    right: 40px;
+    padding: 10px;
+    background: #7e7a7a;
+    border-radius: 5px;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    font-size: 12px;
+    -ms-filter: "alpha(opacity=80)";
+    -moz-opacity: 0.8;
+    -khtml-opacity: 0.8;
+    opacity: 0.8;
+}*/
+/*********************トップページボタン*********************/
+
+/************************↓about_block*************************/
+div#detail{
+  margin-top: -60px;
+  /*height: 100%;*/
+}
+
+div#about_block{
+  /*background-color: #f4f6f1;*/
+  background-color: #1a1919;
+}
+
+div.about{
+  text-align: center;
+  /*height: 235px;*/
+}
+
+div#detail div.about h2{
+  padding-top: 55px;
+  margin-left: -0.5em;
+  font-family: "Times New Roman";
+  font-weight: 200;
+  font-size: 65px;
+  /*color: #666;*/
+  color: #7b7d80;
+}
+
+div#detail div.about span.explanation{
+  display: block;
+  margin-top: -40px;
+  margin-left: -1.8em;
+  font-family: "calendas_plusregular";
+  font-size: 17px;
+  /*color: #666;*/
+  color: #7b7d80;
+  padding-bottom: 30px;
+}
+/**************************↑about_block**************************/
+/************************↓contents_block*************************/
+div.contents_block{
+  padding-top: 40px;
+  /*background-color:#f4f6f1; */
+  background-color: #1a1919;
+  width: 100%;
+  display: table;
+  padding-bottom: 140px;
+}
+
+div.contents_group{
+  /*margin-left: 23%;*/
+  margin-left: 15%;
+  width: 80%;
+  /*margin-right: 22%;*/
+}
+
+div.purpose{
+  width: 45%;
+  float: left;
+  font-family: "Times New Roman";
+  padding-left: 1em;
+  margin-right: 1em;
+}
+
+h3{
+  font-size: 24px;
+  /*color: #666;*/
+  color: #7b7d80;
+}
+
+p{
+  font-size: 20px;
+  /*color: #666;*/
+  color: #7b7d80;
+}
+
+div.use{
+  width: 40%;
+  float: right;
+  font-family: "Times New Roman";
+  padding-right: 3.5em;
+}
+/**************************↑contents_block**************************/
+/************************↓explanation_block*************************/
+div#explanation_block{
+  padding-top: 30px;
+  background-color: #242222;
+  font-size: 20px;
+  width: 100%;
+}
+
+div.title_block{
+  text-align: center;
+}
+
+div.title_block h2{
+  margin-top: -30px;
+  padding-top: 55px;
+  font-family: "Times New Roman";
+  font-weight: 200;
+  font-size: 65px;
+  color: #84888c;
+}
+
+div.all_block{
+  width: 100%;
+}
+
+div.subtitle_block{
+  width: 100%;
+  padding-top: 30px;
+  padding-bottom: 80px;
+}
+
+div.subtitle_block div.sub1{
+  display: inline-block;
+  padding-left: 5%;
+  vertical-align: top;
+  width: 25%;
+  text-align: center;
+}
+
+
+
+div.subtitle_block div.sub3{
+  display: inline-block;
+  vertical-align: top;
+  width: 25%;
+  text-align: center;
+  line-height: 1.5em;
+}
+
+div.subtitle_block div.sub4{
+  display: inline-block;
+  vertical-align: top;
+  width: 40%;
+  text-align: center;
+}
+
+div.subtitle_block div.sub1 span{
+  display:block;
+  font-family: "calendas_plusregular";
+  font-size: 20px;
+  color: #84888c;
+}
+
+div.subtitle_block div.sub1 span.block1{
+  padding-bottom: 10em;
+}
+
+div.subtitle_block div.sub2 span{
+  display:block;
+  font-family: "calendas_plusregular";
+  font-size: 20px;
+  color: #84888c;
+}
+
+div.subtitle_block div.sub3 span{
+  display:block;
+  font-family: "calendas_plusregular";
+  font-size: 20px;
+  color: #84888c;
+}
+
+div.subtitle_block div.sub4 span{
+  display:block;
+  font-family: "Times New Roman";
+  font-size: 20px;
+  color: #84888c;
+  line-height: 1.5em;
+}
+
+div.subtitle_block div.sub4 div.target_department_en span{
+  font-family: "Times New Roman";
+}
+
+div.subtitle_block div.sub4 span.font{
+  font-family: "Times New Roman";
+}
+
+div.all_block div.subtitle_block span.font_set{
+  font-size: 25px;
+  color: #84888c;
+  padding-bottom: 20px;
+}
+
+div.all_block div.subtitle_block span{
+  font-family: "calendas_plusregular";
+  font-size: 20px;
+  color: #84888c;
+}
+
+
+/************************↑explanation_block*************************/
+
+/************************Cube*************************/
+
+/************************Cube*************************/
+
+/************************↓register_block*************************/
+div.register_block{
+  text-align: center;
+  padding-right: 13px;
+  background-color: #242222;
+}
+div.register_block a.button span.set{
+  color: #84888c;
+  font-size: 2.5em;
+  font-family: "Times New Roman";
+}
+div.register_block a.button {
+  display: inline-block;
+  margin-top: 90px;
+  margin-bottom: 90px;
+  width: 250px;
+  height: 60px;
+  text-decoration: none;
+  line-height: 54px;
+  outline: none;
+  position: relative;
+  z-index: 2;
+  background-color: transition;
+  border: 3px solid #84888c;
+  color: #84888c;
+  line-height: 48px;
+}
+.button::before,
+.button::after {
+  position: absolute;
+  z-index: -1;
+  display: block;
+  content: '';
+  top: 4px;
+  left: 4px;
+  width: 236px;
+  height: 46px;
+  border: 3px solid #84888c;
+  opacity: 0;
+}
+.button,
+.button::before,
+.button::after {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  -webkit-transition: all .3s;
+  transition: all .3s;
+}
+.button:hover::after {
+  opacity: 1;
+}
+/************************↑register_block*************************/
+a.page-top{
+
+}
