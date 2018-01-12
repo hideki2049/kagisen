@@ -25,7 +25,7 @@ body {
   background: #fff;
 }
 
-#teacherQuest {
+#teacherQuest ,#schoolDesign{
   background: #0F2540;
   color: #fff;
   padding: 10px;

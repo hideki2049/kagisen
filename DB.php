@@ -1,6 +1,6 @@
 <?php
  $dbname = 'oist2017';
- $host = '192.168.205.199';
+ $host = 'localhost';
  $user = 'kagisen';
  $password = 'Pi=3.1+4';
 

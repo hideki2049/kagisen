@@ -7,11 +7,14 @@
       exit;
   }
 
-  //userの名前
-  // $stmt = $pdo->prepare('select name from t_studentregist where studentnum = ?');
-  // $stmt->execute(array($_SESSION["USERID"]));
-  // $userName = $stmt->fetchAll();
 
+  //userの名前
+  $stmt = $pdo->prepare('select name from t_studentregist where studentnum = ?');
+  $stmt->execute(array($_SESSION["USERID"]));
+  $userName = $stmt->fetchAll();
+  foreach ($userName as $rowUN) {
+    $userNamePrint = $rowUN['name'];
+  }
 
   //すでにアンケートが登録されているかどうか調べる
   $stmt = $pdo->prepare('select * from t_answer1 where year = ? and studentnum = ? and semester = ? limit 1');
@@ -71,7 +74,7 @@
     <script type="text/javascript" src="ayu.js"></script>
   </head>
   <body>
-    <div id="useridPrint"><?php echo "{$_SESSION["USERID"]}"; ?>さん</div>
+    <div id="useridPrint"><?php echo "{$userNamePrint}"; ?>さん</div>
     <div id="statusPrint"><?php echo "{$_SESSION["YEAR"]}年 {$_SESSION["SEMESTER"]}学期";?></div>
 
 
@@ -125,7 +128,7 @@
          //学校へのアンケート分処理する(タイプ3)
          $l=0;///学校へのアンケート項目数カウント変数 初期化
          foreach ($content2 as $row3){
-           echo "<label for=\"Panel\" class=\"\" id=\"teacherQuest\">{$row3['content']}</label>";
+           echo "<label for=\"Panel\" id=\"schoolDesign\">{$row3['content']}</label>";
            echo "<ul class=\"schoolQuest\">";
            echo "<table border=\"1\">";
 
