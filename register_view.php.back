@@ -42,12 +42,7 @@
            and t_teacher.teachercd = m_teacher.teachercd
            and t_student.studentnum = ?
            and t_student.year = (select year from t_questimplement order by year desc,semester desc limit 1)
-           and t_teacher.semester = (select semester from t_questimplement order by year desc,semester desc limit 1) 
-           order by t_teacher.teachertype, m_teacher.kana ';
-
-
-
-
+           and t_teacher.semester = (select semester from t_questimplement order by year desc,semester desc limit 1) ';
    $stmt = $pdo->prepare($sql);
    $stmt->execute(array($_SESSION["USERID"]));
    $teacher = $stmt->fetchAll();
@@ -66,7 +61,7 @@
 <html>
   <head>
     <meta charset="utf-8">
-    <title>アンケート画面</title>
+    <title>登録画面</title>
     <style media="screen">
       textarea{
         width: 99.3%;
@@ -80,18 +75,7 @@
   </head>
   <body>
     <div id="useridPrint"><?php echo "{$userNamePrint}"; ?>さん</div>
-   <!-- <div id="statusPrint"><?php echo "{$_SESSION["YEAR"]}年 {$_SESSION["SEMESTER"]}学期";?></div> -->
-<div id="statusPrint">
-   <?php
-     echo $_SESSION["YEAR"] . '年';
-   ?>
-   <?php
-     if($_SESSION[SEMESTER]==1)
-       echo '前期';
-     else
-       echo '後期';
-   ?>
-</div>
+    <div id="statusPrint"><?php echo "{$_SESSION["YEAR"]}年 {$_SESSION["SEMESTER"]}学期";?></div>
 
 
        <input type="checkbox" id="Panel" class="on-off" />
@@ -121,12 +105,12 @@
              }else{//アンケート項目(ラジオボタン式,タイプ1)
                echo "<tr>";
                echo "<td class=\"No\">{$row2['questnum']}</td><td>{$row2['content']}</td>";
-               echo "<td width=250 align = 'center' class=\"evaluate\">";
+               echo "<td class=\"evaluate\">";
                foreach ($ar_rate as $key => $value) {//4つのラジオボタンを生成
                  if($key == '2'){
-                   echo "<label id=\"selectPointer\"><input type=\"radio\" name=\"answer_{$row1['teachercd']}_{$j}\" value=\"{$key}\" class=\"{$row1['teachercd']}\" checked=\"checked\" id=\"selectPointer\">{$value} </label>";
+                   echo "<label id=\"selectPointer\"><input type=\"radio\" name=\"answer_{$row1['teachercd']}_{$j}\" value=\"{$key}\" class=\"{$row1['teachercd']}\" checked=\"checked\" id=\"selectPointer\">{$value}</label>";
                  }else{
-                   echo "<label id=\"selectPointer\"><input type=\"radio\" name=\"answer_{$row1['teachercd']}_{$j}\" value=\"{$key}\" class=\"{$row1['teachercd']}\" id=\"selectPointer\">{$value} </label>";
+                   echo "<label id=\"selectPointer\"><input type=\"radio\" name=\"answer_{$row1['teachercd']}_{$j}\" value=\"{$key}\" class=\"{$row1['teachercd']}\" id=\"selectPointer\">{$value}</label>";
                  }
                }
                echo "</td>";
@@ -155,10 +139,10 @@
            echo "<td colspan = \"3\"><textarea name=\"message\" rows = \"5\" class=\"qt2_{$l}\"></textarea></td>";
            echo "</tr>";
            echo "<tr>";
-           echo "<td colspan = \"3\" align = \"right\"><button id=\"allSubmit\" style=\"width:200px; height:50px; font-size:14pt\" onclick=\"this.disabled = true;\">登録</button></td>";
+           echo "<td colspan = \"3\" align = \"right\"><button id=\"allSubmit\" onclick=\"this.disabled = true;\">登録</button></td>";
            echo "</tr>";
            echo "<tr>";
-           echo "<td class = \"cell\" colspan = \"3\" align = \"left\"><a href = \"Logout.php\">ログアウト</a></td>";
+           echo "<td class = \"cell\" colspan = \"3\" align = \"right\"><a href = \"Logout.php\">ログアウト</a></td>";
 
            echo "</tr>";
            echo "</ul>";

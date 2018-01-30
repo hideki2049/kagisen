@@ -54,12 +54,10 @@
 
     //記述式項目数分順番にインサート処理
     for($j=0;$j<$questNum2;$j++){
-if ($dataAnswer2[$tcd][$j]!=''){
       $stmt = $pdo->prepare('insert into t_answer2 values(?,?,?,?,?,?,now())');
       $stmt->execute(array($year,$semester,$tcd,$studentnum,$questT2NumData[$j],$dataAnswer2[$tcd][$j]));
       //echo $dataAnswer2[$tcd][$j]."\n";
       //echo $tcd."\n";
-}
     }
 
     next($dataAnswer);

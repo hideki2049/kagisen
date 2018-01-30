@@ -15,5 +15,5 @@ $_SESSION = array();
 // セッションクリア
 @session_destroy();
 
-header("Location: topPage.php");
+header("Location: Login.php");
 ?>
